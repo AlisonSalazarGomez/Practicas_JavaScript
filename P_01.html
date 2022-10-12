@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 01</title>
+</head>
+<body>
+    <h1>Modulo 1</h1>
+    <div id="cont"></div>
+    <script>
+        //Cuando no recibe un parametro
+        var foo = () =>{
+            console.log("Foo!")
+        }
+        //Cuando  contiene un parametro
+        var foo = unParametro => {console.log("Foo")}
+
+        //BOM Y DOM
+        //Creando elementos con su id
+        let h1 = document.createElement("h1");
+        h1.id = "titulo";
+        console.log(h1.dataset);
+        //Crear clase en un elemento
+        h1.classList.add("clase1")
+        h1.classList.remove("clase1")
+        h1.classList.toggle("clase1")
+        //Agregar elemento dentro de  su  padre
+        const  cont = document.getElementById("cont");
+        const p = document.createElement("p")
+        p.innerText ="Lorem Ipsum";
+        cont.appendChild(p);
+        //Sacar hijo de su nodo padre
+        const p = document.querySelector("p");
+        const parent = p.parentNode;
+        parent.removeChild(p);
+    </script>
+</body>
+</html>
